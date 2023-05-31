@@ -13,7 +13,7 @@ namespace DutyNotif
         public static bool duty = false;
         internal Class1()
         {
-            EventHandlers["Kilo::DutyNotif"] += DutyNotif;
+            EventHandlers["Kilo::DutyNotif"] += new Action<bool>(DutyNotif);
         }
         private void DutyNotif(bool duty)
         {
